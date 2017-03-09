@@ -1,4 +1,4 @@
-# ClassicAppExporter
+# Geocaching Classic App Exporter
 Exports lists and waypoints from the Geocaching Classic App
 
 This app will read the classic Geocaching App data from an unencrypted iTunes backup and will export waypoints and lists to geocaching.com. This is currently only compatable with the iOS version of the classic app. I am exploring the possibility of making an Android compatable version.
