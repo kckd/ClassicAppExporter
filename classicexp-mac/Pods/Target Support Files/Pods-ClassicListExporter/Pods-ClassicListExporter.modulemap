@@ -1,0 +1,6 @@
+framework module Pods_ClassicListExporter {
+  umbrella header "Pods-ClassicListExporter-umbrella.h"
+
+  export *
+  module * { export * }
+}

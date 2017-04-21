@@ -1,0 +1,28 @@
+﻿<Window x:Class="ClassicListExporter.WaypointPickerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClassicListExporter"
+        mc:Ignorable="d"
+        Title="WaypointPickerWindow" Height="300" Width="525">
+  
+    <Grid>
+        <ListView x:Name="WaypointListView"  ItemsSource="{Binding}" Margin="0,0,0,50">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Selected" Width="50" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate DataType="{x:Type local:WaypointItem}">
+                                <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}" IsThreeState="False"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Waypoint" DisplayMemberBinding="{Binding waypointDescription}" Width="475"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Export selected" Margin="0,0,0,10" Width="105" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="Button_Click"/>
+
+    </Grid>
+</Window>

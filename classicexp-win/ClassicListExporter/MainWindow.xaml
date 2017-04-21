@@ -1,0 +1,22 @@
+﻿<Window x:Class="ClassicListExporter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClassicListExporter"
+        mc:Ignorable="d"
+        Title="Geocaching Classic List Exporter" Height="368.052" Width="525">
+    <Grid>
+        <Button x:Name="selectListButton" Content="Export Lists" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Width="181" Click="Button_Click" Margin="329,0,10,10.5" IsEnabled="False"/>
+        <ListView x:Name="backupListView" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="262" Margin="10,10,0,0" VerticalAlignment="Top" Width="500" SelectionChanged="backupListView_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Date" DisplayMemberBinding="{Binding Item1}"/>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Item2}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="ExportWaypointsButton" Content="Export Waypoints" HorizontalAlignment="Left" Margin="10,0,0,10.5" VerticalAlignment="Bottom" Width="116" IsEnabled="False" Click="ExportWaypointsButton_Click" />
+
+    </Grid>
+</Window>

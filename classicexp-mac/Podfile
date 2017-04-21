@@ -1,0 +1,7 @@
+use_frameworks!
+platform :osx, '10.11'
+target 'ClassicListExporter' do
+    pod 'SQLite.swift', '~> 0.11.2'
+    pod 'SwiftyJSON'
+    pod 'Alamofire', '~> 4.3'
+end
